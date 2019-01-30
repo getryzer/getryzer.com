@@ -1,11 +1,13 @@
 language: node_js
 node_js:
- — “7”
-script:
- — echo “Deploy.”
+  - "11"
+before_install:
+  - npm install -g firebase-tools
 install:
- — npm install -g firebase-tools
- - npm install
+  - npm install
+cache: npm
+script:
  - npm run build
-after_success:
- — firebase deploy — project getryzerweb — token FIREBASE_TOKEN.
+after_install:
+ - cd public
+after_success: "firebase deploy --token $FIREBASE_TOKEN --project getryzerweb"

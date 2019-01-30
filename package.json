@@ -12,6 +12,7 @@
     "copy-js-bootstrap": "cpx \"node_modules/bootstrap/dist/js/*\" public/js/bootstrap/",
     "copy-js-jquery": "cpx \"node_modules/jquery/dist/jquery.min.*\" public/js/jquery/",
     "copy-js-popper": "cpx \"node_modules/popper.js/dist/umd/popper.min.*\" public/js/popper/",
+    "copy-js-analytics": "cpx \"src/js/analytics.js\" public/js/analytics",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/bootstrap-theme.scss public/css/bootstrap/bootstrap-theme.css",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output public/css/bootstrap/bootstrap-theme.min.css public/css/bootstrap/bootstrap-theme.css",
     "css": "npm-run-all --sequential css-*",
